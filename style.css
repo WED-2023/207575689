@@ -1,8 +1,9 @@
+/* עיצוב סרגל עליון */
 #menu {
 	position: fixed;
 	top: 0;
 	width: 100%;
-	background: linear-gradient(to right, #f25c54, #f2f2f2); /* אדום בהיר לאפור */
+	background: linear-gradient(to right, #f25c54, #f2f2f2);
 	padding: 10px 0;
 	z-index: 1000;
 	box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
@@ -17,24 +18,26 @@
   }
   
   #menu li {
-	margin: 0 15px;
+	margin: 0 20px;
   }
   
   #menu a {
-	color: #222; /* צבע טקסט כהה שייראה טוב על רקע בהיר */
+	color: #222;
 	text-decoration: none;
 	font-weight: bold;
-	font-size: 16px;
-	transition: color 0.3s;
+	font-size: 18px;
+	transition: color 0.3s, transform 0.3s;
   }
   
   #menu a:hover {
-	color: #c0392b; /* אדום טיפה כהה יותר כשעוברים עם העכבר */
+	color: #c0392b;
+	transform: scale(1.1);
   }
-
-.section {
-	padding: 40px;
-	font-family: Arial, sans-serif;
+  
+  /* עיצוב סקשנים כלליים */
+  .section {
+	padding: 60px 20px;
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 	direction: rtl;
 	background-color: #f9f9f9;
 	border-bottom: 1px solid #ddd;
@@ -42,32 +45,41 @@
   
   .section h2 {
 	color: #444;
-	font-size: 28px;
+	font-size: 32px;
 	margin-bottom: 20px;
+	text-align: center;
   }
   
   .section p {
 	font-size: 18px;
-	line-height: 1.6;
+	line-height: 1.8;
 	color: #333;
+	margin-bottom: 10px;
   }
-
+  
+  /* קופסת תוכן */
   .content-box {
-  background-color: white;
-  padding: 30px;
-  border-radius: 16px;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.content-box h2 {
+	background-color: white;
+	padding: 40px;
+	border-radius: 18px;
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+	max-width: 900px;
+	margin: 0 auto;
+	transition: all 0.3s ease-in-out;
+  }
+  
+  .content-box:hover {
+	transform: scale(1.01);
+  }
+  
+  .content-box h2 {
 	text-align: center;
-	font-size: 32px;
+	font-size: 36px;
 	color: #222;
 	margin-bottom: 25px;
   }
-
+  
+  /* גלריית תמונות */
   .gallery {
 	display: flex;
 	flex-wrap: wrap;
@@ -76,10 +88,10 @@
   }
   
   .gallery img {
-	width: 280px;
+	width: 260px;
 	height: auto;
 	border-radius: 12px;
-	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+	box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
 	transition: transform 0.3s ease;
   }
   
@@ -87,13 +99,14 @@
 	transform: scale(1.05);
   }
   
+  /* וידאו */
   .video-wrapper {
 	position: relative;
 	padding-bottom: 56.25%;
 	height: 0;
 	overflow: hidden;
 	max-width: 100%;
-	margin-top: 20px;
+	margin-top: 30px;
   }
   
   .video-wrapper iframe {
@@ -102,18 +115,21 @@
 	left: 0;
 	width: 100%;
 	height: 100%;
-	border-radius: 12px;
+	border-radius: 16px;
   }
-
+  
+  /* לייק */
   .like-box {
 	text-align: center;
+	margin-top: 20px;
   }
   
   .like-box p {
 	margin-bottom: 15px;
-	font-size: 18px;
+	font-size: 20px;
   }
-
+  
+  /* QR */
   .qr-box {
 	display: flex;
 	justify-content: center;
@@ -121,10 +137,94 @@
   }
   
   .qr-box img {
-	width: 200px;
+	width: 220px;
 	height: auto;
 	border-radius: 12px;
 	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   }
   
+  /* SPA */
+  #spa h3 {
+	color: #c0392b;
+	margin-top: 20px;
+	font-size: 24px;
+  }
+  
+  #spa p {
+	line-height: 1.8;
+	text-align: right;
+	direction: rtl;
+	font-size: 18px;
+  }
+  
+  /* צור קשר */
+  #contact form {
+	text-align: right;
+	direction: rtl;
+	background-color: #fefefe;
+	padding: 40px;
+	border-radius: 20px;
+	box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+	max-width: 800px;
+	margin: 0 auto;
+  }
+  
+  #contact input,
+  #contact textarea,
+  #contact select {
+	width: 100%;
+	padding: 14px;
+	margin-top: 8px;
+	margin-bottom: 18px;
+	border: 1px solid #ccc;
+	border-radius: 14px;
+	font-size: 16px;
+	box-sizing: border-box;
+  }
+  
+  #contact button {
+	background-color: #c0392b;
+	color: white;
+	padding: 14px 30px;
+	font-size: 18px;
+	border: none;
+	border-radius: 30px;
+	font-weight: bold;
+	cursor: pointer;
+	transition: background-color 0.3s;
+  }
+  
+  #contact button:hover {
+	background-color: #a93226;
+  }
+  
+  #formOutput {
+	margin-top: 30px;
+	padding: 20px;
+	background-color: #e8f6f3;
+	border: 1px solid #d1e7dd;
+	border-radius: 12px;
+	font-size: 16px;
+	text-align: center;
+  }
+  
+  /* רספונסיביות */
+  @media (max-width: 768px) {
+	.gallery img {
+	  width: 100%;
+	}
+	.section {
+	  padding: 30px 15px;
+	}
+	.content-box {
+	  padding: 20px;
+	}
+	#menu ul {
+	  flex-direction: column;
+	  align-items: center;
+	}
+	#menu li {
+	  margin: 10px 0;
+	}
+  }
   
