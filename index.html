@@ -117,26 +117,38 @@
 <section id="contact" class="section">
   <div class="content-box">
     <h2>צור קשר</h2>
-    <form id="contactForm">
+
+    <form class="contact-form" action="https://formsubmit.co/hadarazaria1@gmail.com" method="POST">
+      
+      <!-- שדה כתובת מייל -->
       <label for="email">כתובת מייל:</label><br>
       <input type="email" id="email" name="email" required><br><br>
 
+      <!-- שדה תוכן ההודעה -->
       <label for="message">תוכן ההודעה:</label><br>
       <textarea id="message" name="message" rows="5" required></textarea><br><br>
 
+      <!-- שדה בחירת חייכן -->
       <label for="mood">בחר חייכן:</label><br>
       <select id="mood" name="mood">
-        <option value="😊">שמח 😊</option>
-        <option value="😐">ניטרלי 😐</option>
-        <option value="😢">עצוב 😢</option>
+        <option value="שמח 😊">שמח 😊</option>
+        <option value="ניטרלי 😐">ניטרלי 😐</option>
+        <option value="עצוב 😢">עצוב 😢</option>
       </select><br><br>
 
+      <!-- שדות מוסתרים לנוחות -->
+      <input type="hidden" name="_captcha" value="false">
+      <input type="hidden" name="_subject" value="הודעה מהאתר שלך">
+      <input type="hidden" name="_template" value="table">
+      <input type="hidden" name="_next" value="https://your-site.com/thankyou.html">
+
+      <!-- כפתור שליחה -->
       <button type="submit">שלח</button>
     </form>
 
-    <div id="formOutput" style="margin-top: 20px;"></div>
   </div>
 </section>
+
 
 
 <script type="text/javascript">
